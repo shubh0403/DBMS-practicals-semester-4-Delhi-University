@@ -1,0 +1,4 @@
+CREATE TABLE Department(Dno INT PRIMARY KEY, Dname VARCHAR(50), Location VARCHAR(50) DEFAULT "New Delhi");
+CREATE TABLE Employee(Eno CHAR(3) NOT NULL PRIMARY KEY, Ename VARCHAR(50) NOT NULL, Job_type VARCHAR(50) NOT NULL, SupervisionENO CHAR(3), Hire_date DATE NOT NULL, Dno INT, Commission DECIMAL(10,2), Salary DECIMAL(7,2) NOT NULL, FOREIGN KEY (SupervisionENO) REFERENCES Employee(Eno), FOREIGN KEY (Dno) REFERENCES Department(Dno));
+DESC Department;
+DESC Employee;
